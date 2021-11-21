@@ -1,0 +1,24 @@
+.servicesCard{
+   
+    @include viewport-size(mobile-phone-small){
+        background:$frost-white;
+        width:300px;
+        height:400px;
+        padding-top:5rem;
+        margin-bottom:3rem;
+        @include flex(column, flex-start, center);
+    }
+    @include viewport-size(mobile-tablet-large){
+            width:400px;
+
+    }
+    .servicesIcon{
+        width:100px;
+        height:100px;
+        margin-bottom:2rem;
+        
+    }
+    .serviceTitle{
+        font-size: 3rem;
+    }
+}

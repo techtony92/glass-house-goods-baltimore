@@ -1,0 +1,45 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.html{
+    box-sizing: inherit;
+    font-family: "";
+}
+
+.container{
+    @include viewport-size(mobile-phone-small){
+        display:block;
+        width:300px;
+        margin:auto;
+        overflow-x:hidden;
+        
+    }
+    @include viewport-size(mobile-phone-med){
+        width:414px;
+    }
+
+    @include viewport-size(mobile-tablet-med){
+        width:786px;
+    }
+    @include viewport-size(mobile-tablet-large){
+        width:1024px;
+    }
+    @include viewport-size(med){
+        width:1366px;
+    }
+    @include viewport-size(standard){}
+    max-width: 1600px;
+}
+
+a{
+    text-decoration: none;
+    color:#fff;
+}

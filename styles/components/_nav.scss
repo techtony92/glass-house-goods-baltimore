@@ -1,0 +1,101 @@
+.nav{
+
+    @include viewport-size(mobile-tablet-med){
+        flex-wrap: wrap;
+        @include flex(row, space-between, center);
+        &List{
+            display: none;
+        }
+        &mobileList{
+            display:block;
+        }
+    }
+    @include viewport-size(mobile-tablet-large){
+        position: relative;
+        border-bottom:1px solid $frost-white;
+        height:90px;
+        z-index: 1;
+    }
+    // @include viewport-size(standard){
+    //     position: relative;
+    //     border-bottom:1px solid $frost-white;
+    //     height:90px;
+    //     z-index: 1;
+    //     @include flex(row, space-between, center);
+    // }
+    // position: relative;
+    // border-bottom:1px solid $frost-white;
+    // height:90px;
+    // z-index: 1;
+    // @include flex(row, space-between, center);
+    
+    &List{
+            @include viewport-size(mobile-phone-small){
+                display:none;
+            }
+            
+            @include viewport-size(mobile-tablet-large){
+                list-style:none;
+                padding-top:1rem;
+                @include flex(row, space-between, center);
+            }
+            @include viewport-size(med){
+                @include flex(row, space-around, center);
+            }
+        &Item{
+            .itemLink{
+                @include viewport-size(mobile-tablet-med){
+                    
+                }
+                @include viewport-size(mobile-tablet-large){
+                    display: inline-block;
+                    position: relative;
+                    font-size: 1.3rem;
+                    padding:0.8rem;
+                    width:100%;
+                    height:100%;
+                    font-weight: 700;
+                    color:$eggshell-white;
+                    transition: all 3s ease-in-out;
+                }
+                @include viewport-size(med){
+                    font-size: 2rem;
+                    padding:1rem;
+                }
+            }
+            .itemLink::before{
+                content:"";
+                display: inline-block;
+                position: absolute;
+                width:0;
+                height:0;
+                top:75%;
+                left:45%;
+                border-bottom: 1px solid cornflowerblue;
+                transition: all 0.5s ease-in-out;
+
+            }
+            .itemLink::after{
+                content:"";
+                display: inline-block;
+                position: absolute;
+                width:0;
+                height:0;
+                top:75%;
+                right:45%;
+                border-bottom :1px solid cornflowerblue;
+                transition: all 0.5s ease-in-out;
+            }
+            // .itemLink:hover{
+            //     background:chocolate;
+            //     color:$frost-white;
+            // }
+            .itemLink:hover::before,
+            .itemLink:hover::after{
+                
+                width:45%;
+                height:1px;
+            }
+        }
+    }
+}

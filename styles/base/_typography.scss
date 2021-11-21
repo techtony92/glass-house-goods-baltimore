@@ -1,0 +1,96 @@
+
+.title{
+    
+}
+.headerNavTitle{
+    color:$frost-white;
+}
+.footerNavTitle{
+    color:$black-chocolate;
+}
+.sectionTitle{
+    
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.title-light{
+    color:$frost-white;
+}
+
+.servicesTitle{
+    color:$black-chocolate;
+}
+
+
+.headerNavTitle{
+        @include viewport-size(mobile-phone-small){
+            padding-top:1rem;
+            font-size:2rem;
+        }
+        @include viewport-size(mobile-tablet-med){
+            font-size:2rem;
+        }
+        @include viewport-size(mobile-tablet-large){
+            font-size: 2.5rem;
+        }
+        @include viewport-size(med){
+            font-size: 3rem;
+        }
+}
+
+
+.primaryHeading{
+        @include viewport-size(mobile-phone-small){
+            font-size: 1.8rem;
+            padding-top:100px;  
+        }
+        @include viewport-size(mobile-phone-med){
+            font-size: 2.8rem;
+            
+        }
+        @include viewport-size(mobile-tablet-med){
+            font-size: 3.5rem;
+            padding-top:200px;
+        }
+        @include viewport-size(mobile-tablet-large){
+            font-size: 6rem;
+            padding-top:400px;
+            width:900px;
+        }
+        .textOne{
+            display: block;
+        }
+        .textTwo{
+            display: block;
+            @include viewport-size(mobile-phone-small){
+                transform: translateX(60px);
+
+            }
+            @include viewport-size(mobile-tablet-large){
+                transform: translateX(150px);
+            }
+        }
+}
+
+
+.subText{
+        @include viewport-size(mobile-phone-small){
+            font-size:1.3rem;
+            transform: translateX(170px);
+        }
+        @include viewport-size(mobile-phone-med){
+            font-size: 2.2rem;
+            transform: translateX(254px);
+        }
+        @include viewport-size(mobile-tablet-med){
+            font-size: 2.8rem;
+            transform: translateX(330px);
+        }
+        @include viewport-size(mobile-tablet-large){
+            font-size:6rem;
+            transform: translateX(300px);
+        }
+}

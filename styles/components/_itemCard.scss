@@ -1,0 +1,91 @@
+.itemCard{
+    @include viewport-size(mobile-phone-small){
+        position:relative;
+        width:280px;
+        margin-bottom:2rem;
+        height:300px;
+    }
+    @include viewport-size(mobile-tablet-med){
+      
+        width:550px;
+        height:600px;
+    }
+    @include viewport-size(mobile-tablet-large){
+      
+        width:500px;
+        height:700px;
+    }
+    @include viewport-size(med){
+        height:800px;
+        width:100%;
+    }
+    #mainCard1{
+        @include backgroundGrid("./../images/chocolate-cake-bg.jpg");
+    }
+    #mainCard2{
+        @include backgroundGrid("./../images/cake-pops-bg.jpg");
+    }
+    #mainCard3{
+        @include backgroundGrid("./../images/candy-apples-bg.jpg");
+    }
+    #mainCard4{
+        @include backgroundGrid("./../images/sweet-patato-pie-bg.jpg");
+    }
+    #mainCard5{
+        @include backgroundGrid("./../images/chocolate-strawberries-bg.jpg");
+    }
+    #mainCard6{
+        @include backgroundGrid("./../images/cinnabun-loaf-bg.jpg");
+    }
+    // &Main{
+       
+    //     background-size: cover;
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    //     height:100%;
+    //     box-shadow: inset 800px 800px rgba(#333, 0.7);
+    //     margin:auto;
+    //     padding-top:3rem;
+    //     padding-left:5rem;
+    // }
+    .itemCardImage{
+        display:block;
+        height:70%;
+        width:65%;
+        margin:auto;
+        border-radius: 10px;
+        max-width: 800px;    
+
+    }
+    .itemCardDesc{
+        font-size: 3rem;
+        color:#fff;
+        @include viewport-size(mobile-tablet-med){
+               
+            @include flex(column, flex-start, center);
+        }
+        @include viewport-size(med){
+            @include flex(column, flex-start, center);   
+        }
+        .itemCardText{
+            @include viewport-size(mobile-phone-small){
+                font-size:2rem;
+                text-align: center;
+            }
+            @include viewport-size(mobile-tablet-large){
+                font-size:2.5rem;
+            }
+        }
+        .itemCardPrice{
+            @include viewport-size(mobile-phone-small){
+                font-size:2rem;
+                text-align: center;
+            }
+            @include viewport-size(mobile-tablet-large){
+                font-size:2.5rem;
+            }
+            
+        }
+
+    }
+}
